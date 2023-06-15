@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c 1 | paste -d -s ''
+sed -e 's/^\(.\).*/\1/g' file_test | tr -d '\n' |paste
